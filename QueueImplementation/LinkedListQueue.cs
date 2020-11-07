@@ -36,6 +36,26 @@ namespace QueueImplementation
             this.rear.next = newNode;
             this.rear = newNode;
         }
+
+        /// <summary>
+        /// Dequeues this instance.
+        /// </summary>
+        public void Dequeue()
+        {
+            if (this.front == null)
+            {
+                Console.WriteLine("Queue is empty");
+                return;
+            }
+            // Store previous front and move front one node ahead
+            Node temp = this.front;
+            this.front = this.front.next;
+
+            Console.WriteLine("\n{0} dequeued from queue " , temp.data);
+            // If front becomes NULL, then change rear also as NULL 
+            if (this.front == null)
+                this.rear = null;
+        }
         /// <summary>
         /// Displays this instance.
         /// </summary>

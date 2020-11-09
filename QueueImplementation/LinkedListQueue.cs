@@ -4,11 +4,11 @@ using System.Text;
 
 namespace QueueImplementation
 {
-    class LinkedListQueue
+    public class LinkedListQueue
     {
         //Rear is used to enqueue and front is to dequeue
-        Node front;
-        Node rear;
+        public Node front;
+        public Node rear;
 
         /// <summary>
         /// Prevents a default instance of the <see cref="LinkedListQueue"/> class from being created.
